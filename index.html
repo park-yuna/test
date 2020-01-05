@@ -1,13 +1,130 @@
-<html>
-    <head>head</head>
-    <body>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-        <div>test</div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="./swiper.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">   
+    <script src="https://kit.fontawesome.com/e6c24dae5f.js" crossorigin="anonymous"></script>
+</head>
+<body onload="followMouse();">
+
+    
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="parallax-bg bgBlur" style="background-image:url(./images/ff.jfif)" data-swiper-parallax="-9%"></div>
+        <div id="home">
+            <a href="index.html"><h1>花樣年華</h1></a>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div data-text="About" class="title mainText" data-swiper-parallax="-300"
+                style=" cursor: pointer;" onclick="location.href='./detail.html';">About</div>
+            <!-- <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+            <div class="text" data-swiper-parallax="-100">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+            </div> -->
+          </div>
+          <div class="swiper-slide">
+            <div data-text="Casting" class="title mainText" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">Casting</div>
+            <!-- <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+            <div class="text" data-swiper-parallax="-100">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+            </div> -->
+          </div>
+          <div class="swiper-slide">
+            <div data-text="More" class="title mainText" data-swiper-parallax="-300">More</div>
+            <!-- <div class="subtitle" data-swiper-parallax="-300">Subtitle</div>
+            <div class="text" data-swiper-parallax="-100">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+            </div> -->
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="wrap">
+            <div id="ball"></div>
+        </div>
+        <div id="login">
+            <ul id="list">
+                <a href="#"><li class="list-content">Sign up</li></a>
+                <a href="login.html"><li >Login</li></a>
+            </ul>
+        </div>
+        <div id="board" onclick="location.href='http://www.daum.net';">
+            <div id="board-wrap">BOARD</div>
+        </div>
+        <div id="footer">
+            <ul id="footer-list">
+                <a href="#"><li class="footer-list-content"><i class="fab fa-twitter"></i></li></a>
+                <a href="#"><li><i class="fab fa-instagram"></i></li></a>
+            </ul>
+        </div>
+      </div>
+<script type="text/javascript" src="./js/swiper.js"></script>
+<script type="text/javascript">
+     var swiper = new Swiper('.swiper-container', {
+      speed: 600,
+      parallax: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    var $ = document.querySelector.bind(document);
+    var $on = document.addEventListener.bind(document);
+
+    var xmouse, ymouse;
+        $on('mousemove', function(e){
+            xmouse = e.clientX || e.pageX;
+            ymouse = e.clientY || e.pageY;
+        });
+    
+    var ball = $('#ball');
+    var x = void 0,
+        y = void 0,
+        dx = void 0,
+        dy = void 0,
+        tx = 0,
+        ty = 0,
+        key = -1;
+
+    var followMouse = function followMouse(){
+        key = requestAnimationFrame(followMouse);
+
+        if(!x || !y){
+            x = xmouse;
+            y = ymouse;
+        } else{
+            dx = (xmouse - x) * 0.125;
+            dy = (ymouse - y) * 0.125;
+            if(Math.abs(dx) + Math.abs(dy) < 0.1){
+                x = xmouse;
+                y = ymouse;
+            }else{
+                x += dx;
+                y += dy;
+            }
+        }
+        ball.style.left = x + 'px';
+        ball.style.top = y + 'px';
+    };
+
+</script>
+</body>
+<svg id="no" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <filter id="blur">
+        <feGaussianBlur stdDeviation="6" />
+    </filter>
+</svg>
 </html>

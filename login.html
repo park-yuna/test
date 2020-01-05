@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./login.css"> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.lettering.js"></script>
+    <script type="text/javascript" src="./js/circletype.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/e6c24dae5f.js" crossorigin="anonymous"></script>
+</head>
+<body onload="followMouse();">
+    <section>
+        <div id="home">
+            <a href="index.html"><h1>花樣年華</h1></a>
+        </div>
+        <div id="close">
+            <span class="emphasis2" >,</span>
+            <a href="index.html">X</a>
+        </div>
+        <div id="register">
+            <p class="thx">Thank you for</p>
+            <!-- <i class="fas fa-times"></i> -->
+            <p>visiting<span class="emphasis" >:)</span></p>
+        </div>
+        <div id="account">
+            <p class="mainTxt">Email</p>
+            <input type="text" name="" id="accountInput" autofocus >
+            <p class="mainTxt">Password</p>
+            <input type="password" name="" id="accountInput"><br>
+            <input type="submit" value="Login" id="loginbtn">
+        </div>
+        <div id="board" onclick="location.href='http://www.daum.net';">
+            &nbsp;Sign up - Register with us - &nbsp;
+        </div>
+        <span class="sliding">
+            <a href="detail.html" class="none"><span>About</span></a>
+            <span>-</span>
+            <a href="detail_casting.html" class="none"><span>Casting</span></a>
+            <span>-</span>
+            <a href="detail_more.html" class="none"><span>More</span></a>
+            <span>-</span>
+            <a href="detail.html" class="none"><span>About</span></a>
+            <span>-</span>
+            <a href="detail_casting.html" class="none"><span>Casting</span></a>
+            <span>-</span>
+            <a href="detail_more.html" class="none"><span>More</span></a>
+            <span>-</span>
+            <a href="detail.html" class="none"><span>About</span></a>
+            <span>-</span>
+            <a href="detail_casting.html" class="none"><span>Casting</span></a>
+            <span>-</span>
+            <a href="detail_more.html" class="none"><span>More</span></a>
+            <span>-</span>
+            <a href="detail.html" class="none"><span>About</span></a>
+            <span>-</span>
+            <a href="detail_casting.html" class="none"><span>Casting</span></a>
+            <span>-</span>
+            <a href="detail_more.html" class="none"><span>More</span></a>
+            <span>-</span>
+        </span>
+        <div class="wrapper">
+            <span class="sliding2">
+                <a href="detail.html" class="none"><span>About</span></a>
+                <span>-</span>
+                <a href="detail_casting.html" class="none"><span>Casting</span></a>
+                <span>-</span>
+                <a href="detail_more.html" class="none"><span>More</span></a>
+                <span>-</span>
+                <a href="detail.html" class="none"><span>About</span></a>
+                <span>-</span>
+                <a href="detail_casting.html" class="none"><span>Casting</span></a>
+                <span>-</span>
+                <a href="detail_more.html" class="none"><span>More</span></a>
+                <span>-</span>
+                <a href="detail.html" class="none"><span>About</span></a>
+                <span>-</span>
+                <a href="detail_casting.html" class="none"><span>Casting</span></a>
+                <span>-</span>
+                <a href="detail_more.html" class="none"><span>More</span></a>
+                <span>-</span>
+                <a href="detail.html" class="none"><span>About</span></a>
+                <span>-</span>
+                <a href="detail_casting.html" class="none"><span>Casting</span></a>
+                <span>-</span>
+                <a href="detail_more.html" class="none"><span>More</span></a>
+                <span>-</span>
+            </span>
+        </div>
+        <div class="wrap">
+            <div id="ball"></div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var $ = document.querySelector.bind(document);
+        var $on = document.addEventListener.bind(document);
+    
+        var xmouse, ymouse;
+            $on('mousemove', function(e){
+                xmouse = e.clientX || e.pageX;
+                ymouse = e.clientY || e.pageY;
+            });
+        
+        var ball = $('#ball');
+        var x = void 0,
+            y = void 0,
+            dx = void 0,
+            dy = void 0,
+            tx = 0,
+            ty = 0,
+            key = -1;
+    
+        var followMouse = function followMouse(){
+            key = requestAnimationFrame(followMouse);
+    
+            if(!x || !y){
+                x = xmouse;
+                y = ymouse;
+            } else{
+                dx = (xmouse - x) * 0.125;
+                dy = (ymouse - y) * 0.125;
+                if(Math.abs(dx) + Math.abs(dy) < 0.1){
+                    x = xmouse;
+                    y = ymouse;
+                }else{
+                    x += dx;
+                    y += dy;
+                }
+            }
+            ball.style.left = x + 'px';
+            ball.style.top = y + 'px';
+        };
+
+        new CircleType(document.getElementById('board'));
+    </script>
+</body>
+</html>

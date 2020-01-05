@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./detail_casting.css">
+    <script type="text/javascript" src="./js/circletype.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://kit.fontawesome.com/e6c24dae5f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.lettering.js"></script>
+
+    <script src="./js/detail_casting.js"></script>
+</head>
+<body onload="followMouse();">
+    <div class="wrapper" id="js-wrapper">
+        <div class="wrap">
+            <div id="ball"></div>
+        </div>  
+        <div class="sections" id="js-slideContainer">
+            <section class="section" id="container">
+                <div id="home">
+                    <a href="index.html"><h1>花樣年華</h1></a>
+                </div>
+                <div id="board" onclick="location.href='http://www.daum.net';">
+                    &nbsp;Sign up - Register with us - &nbsp;
+                </div>
+                <div id="close">
+                    <span class="emphasis2" >,</span>
+                    <a href="./login.html">Login</a>
+                </div>
+                <div id="sectionOne">
+                    <span class="section__title" id="title1">CASTING</span>
+                </div>
+                <span id="trigger--title1"></span>
+            </section>
+            <section class="section">
+                <span class="section_title" id="title2">Wong Kar Wai</span>
+                <span class="casting"># Director</span>
+                <span class="midtitle" id="sliding">In The Mood For Love In The Mood For Love &nbsp;&nbsp;</span>
+                
+                <span><img src="./images/Wong Kar Wai.jfif" id="wong"></span>
+                <div class="part1">
+                    <p class="title">"영화의 완성은 그 작품을 누구와 보았느냐에 달려있다"</p>
+                    <p class="text">
+                        기묘하여 말로 표현할 수 없는 것을 묘부가언 이라고 한다. 왕가위 감독은 시나리오 전문 작가로<br> 영화계에 입문하지만
+                        영화를 언어로 표현하는 방식을 그다지 좋아하지 않는다. 그에게 영화란 커튼 사이로 뿌옇게 비치는 바깥 풍경같은 것이기 때문이다.
+                        그가 펼쳐내는 세계는 언어가 설명할 수<br> 있는 한계 너머에 존재하며, 명확히 드러나지 않지만 분명히 존재하는 신비로움을 지녔다. 
+                        인물의 감정을 설명하기보다는 보여주는 왕가위식 묘사는 간접적이지만 여전히 사실적이다. 언어에 의존하지 않아도 충분히 아름다운 영화이자,
+                        인물의 감정이 사진처럼 또렷이 보이는 영화, 그는 지금도 여전히 영화의 새 지평을 열어젖히고자 하는 진정한 시네아스트이다.
+                    </p>
+                </div>
+                <span id="trigger--title2"></span>
+            </section>
+            <section class="section">
+                <span class="section_title2" id="title3">Jeung Man Yuk</span>
+                <span class="casting2"># Surichen</span>
+                <span><img src="./images/jang.jfif" id="wong2"></span>
+                <div class="part2">
+                    <p class="title">"수리첸에 깃든 장만옥, 장만옥에 깃든 수리첸"</p>
+                    <p class="text">
+                        가느다랗고 여린 몸선을 가진 장만옥이 깨질 것처럼 위태로운 얼굴을 하고 스크린에 등장할때면<br> 관객들은 숨을 집어 삼킨다.
+                        사소한 떨림과 얼굴 근육 하나까지 허투루 움직이지 않는 몸짓은 <br>그녀가 그야말로 천상 배우임을 보여준다.
+                        중화권을 매료시킨 성공한 배우일 뿐만 아니라 강한<br> 자의식을 지닌 예술인이기도 한 그녀. 장만옥은 화려하게 머리를 틀어 올린
+                        배우로 가득한 시상식에서 이리저리 삐친 머리로 레드카펫을 밟는다. 스크린 안과 밖 모두에서 자신만의 아름다움을<br> 뿜어내는
+                        건강함이 그녀의 진짜 매력이다.
+                    </p>
+                </div>
+                <span id="trigger--title3"></span>
+            </section>
+            <section class="section">
+                <span class="section_title2" id="title4">Leung Chiu Wai</span>
+                <span class="casting3">#Chow</span>
+                <span><img src="./images/yang.jfif" id="wong3"></span>
+                <div class="part2">
+                    <p class="title">"유일무이한 배우"</p>
+                    <p class="text">
+                        양조위는 장국영과 함께 왕가위의 페르소나로 불릴만큼 왕가위 감독과 많은 작품을 함께했다.
+                        <br>그 중 <중경삼림(1994)>에서 경찰모를 벗으며 등장하는 양조위를 보고 영화관 곳곳에서 숨 삼키는 소리가 들렸다고 한다. 
+                        화려한 이목구비는 아니지만, 선한 인상으로 눈길을 잡아끄는 그의 외모에 대해 왕가위 감독은 이렇게 말했다.
+                        "만약 한 공간에 장국영화 양조위가 함께 등장하면 모든 사람들의 이목은 장국영에게 쏠리고, 그 사이 양조위는 눈에 띄지 않기 위해
+                        어딘가로 숨을지도 모른다. 하지만 그는 결국엔 서서히 주목을 받는다."
+                    </p>
+                </div>
+                <span id="trigger--title4"></span>
+            </section>
+            <section class="section">
+                <div id="footer">
+                    <ul id="footer-list">
+                        <a href="#"><li class="footer-list-content"><i class="fab fa-twitter"></i></li></a>
+                        <a href="#"><li><i class="fab fa-instagram"></i></li></a>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <span data-text="MORE" class="More" id="title5" 
+                        style="cursor: pointer;" onclick="location.href='./detail.html';">MORE</span>
+                </div>
+                <div id="board2" onclick="location.href='http://www.daum.net';">
+                    &nbsp;BOARD - Frequently Asked Questions - &nbsp;&nbsp;
+                </div>
+                <span id="trigger--title5"></span>
+            </section>
+        </div>
+    </div>
+
+    <script>
+         var $ = document.querySelector.bind(document);
+        var $on = document.addEventListener.bind(document);
+    
+        var xmouse, ymouse;
+            $on('mousemove', function(e){
+                xmouse = e.clientX || e.pageX;
+                ymouse = e.clientY || e.pageY;
+            });
+        
+        var ball = $('#ball');
+        var x = void 0,
+            y = void 0,
+            dx = void 0,
+            dy = void 0,
+            tx = 0,
+            ty = 0,
+            key = -1;
+    
+        var followMouse = function followMouse(){
+            key = requestAnimationFrame(followMouse);
+    
+            if(!x || !y){
+                x = xmouse;
+                y = ymouse;
+            } else{
+                dx = (xmouse - x) * 0.125;
+                dy = (ymouse - y) * 0.125;
+                if(Math.abs(dx) + Math.abs(dy) < 0.1){
+                    x = xmouse;
+                    y = ymouse;
+                }else{
+                    x += dx;
+                    y += dy;
+                }
+            }
+            ball.style.left = x + 'px';
+            ball.style.top = y + 'px';
+        };
+
+        new CircleType(document.getElementById('board'));
+        new CircleType(document.getElementById('board2'));
+    </script>
+</body>
+</html>
